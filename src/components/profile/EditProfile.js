@@ -22,7 +22,7 @@ const EditProfile = () => {
       return;
     }
 
-    axios.get("http://localhost:8000/api/users/profile/", {
+    axios.get("https://testhost.pythonanywhere.com/api/users/profile/", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((response) => {
