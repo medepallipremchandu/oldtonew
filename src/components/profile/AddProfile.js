@@ -57,7 +57,7 @@ const AddProfile = () => {
       formDataObj.append("profile_photo", formData.profile_photo);
       formDataObj.append("date_of_birth", formData.date_of_birth);
       formDataObj.append("mobile_number", formData.mobile_number);
-      await axios.patch("http://localhost:8000/api/users/profile/", formDataObj, {
+      await axios.patch("https://testhost.pythonanywhere.com/api/users/profile/", formDataObj, {
         headers: { Authorization: `Bearer ${token}`, "Content-Type": "multipart/form-data" },
       });
       alert("Profile added successfully!");
