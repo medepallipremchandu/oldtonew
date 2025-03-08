@@ -14,7 +14,7 @@ const ProtectedRoute = ({ children }) => {
         return;
       }
       try {
-        const response = await axios.get("http://localhost:8000/api/users/profile/", {
+        const response = await axios.get("https://testhost.pythonanywhere.com/api/users/profile/", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const profileData = response.data;

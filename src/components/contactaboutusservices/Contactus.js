@@ -38,7 +38,7 @@
 //     setResponseMessage("");
 
 //     try {
-//       const response = await axios.post("http://localhost:8000/api/users/contact/", formData, {
+//       const response = await axios.post("https://testhost.pythonanywhere.com/api/users/contact/", formData, {
 //         headers: { "Content-Type": "application/json" },
 //       });
 
@@ -133,7 +133,7 @@ const ContactUs = () => {
         }));
   
         // Fetch name & email from backend (ensure token is included)
-        axios.get("http://localhost:8000/api/users/contact/", {
+        axios.get("https://testhost.pythonanywhere.com/api/users/contact/", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((response) => {
@@ -165,7 +165,7 @@ const ContactUs = () => {
       console.log("Sending data:", { message: formData.message });
 
 const response = await axios.post(
-  "http://localhost:8000/api/users/contact/",
+  "https://testhost.pythonanywhere.com/api/users/contact/",
   { message: formData.message },  
   {
     headers: { 

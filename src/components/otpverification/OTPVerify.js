@@ -25,7 +25,7 @@ const OTPVerify = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8000/api/users/verify-otp/", {
+      await axios.post("https://testhost.pythonanywhere.com/api/users/verify-otp/", {
         email: location.state.email,
         otp,
       });
@@ -38,7 +38,7 @@ const OTPVerify = () => {
 
   const handleResendOTP = async () => {
     try {
-      await axios.post("http://localhost:8000/api/users/resend-otp/", {
+      await axios.post("https://testhost.pythonanywhere.com/api/users/resend-otp/", {
         email: location.state.email,
       });
       alert("New OTP sent to your email.");

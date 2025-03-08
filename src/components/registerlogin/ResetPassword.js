@@ -28,7 +28,7 @@ const ResetPassword = () => {
     }
 
     try {
-      await axios.post("http://localhost:8000/api/users/reset-password/", { email, password });
+      await axios.post("https://testhost.pythonanywhere.com/api/users/reset-password/", { email, password });
       alert("Password reset successful. Please login with your new password.");
       navigate("/login");
     } catch (error) {
