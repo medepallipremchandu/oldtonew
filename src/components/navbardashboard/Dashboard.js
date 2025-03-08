@@ -29,11 +29,11 @@ const Dashboard = () => {
     <div style={styles.container}>
       <h1>Welcome to Resume Builder</h1>
       <p>Create, edit, and optimize your resume with AI.</p>
+      
 
       <div style={styles.statsContainer}>
         <h3>Resume Processing Stats</h3>
-        <p><strong>📌 Total Resumes Processed (All Users):</strong> {stats.total_resumes_all}</p>
-        <p><strong>📆 Resumes Processed Today (All Users):</strong> {stats.today_resumes_all}</p>
+        
 
         {token ? (
           <>
@@ -51,6 +51,10 @@ const Dashboard = () => {
 
       {!token ? (
         <div>
+
+          <p><strong>📌 Total Resumes Processed (All Users):</strong> {stats.total_resumes_all}</p>
+          <p><strong>📆 Resumes Processed Today (All Users):</strong> {stats.today_resumes_all}</p>
+
           <h2>Services</h2>
           <p>Our platform helps you generate professional resumes with AI.</p>
 
