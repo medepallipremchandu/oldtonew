@@ -6,7 +6,7 @@ const ForgotPassword = () => {
 
   const handleReset = async () => {
     try {
-      await axios.post("http://localhost:8000/api/users/forgot-password/", { email });
+      await axios.post("https://testhost.pythonanywhere.com/api/users/forgot-password/", { email });
       alert("Password reset link sent! Check your email.");
     } catch (error) {
       alert("User not found.");

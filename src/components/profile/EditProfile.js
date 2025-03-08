@@ -22,7 +22,7 @@ const EditProfile = () => {
       return;
     }
 
-    axios.get("http://localhost:8000/api/users/profile/", {
+    axios.get("https://testhost.pythonanywhere.com/api/users/profile/", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((response) => {
@@ -63,7 +63,7 @@ const EditProfile = () => {
       formDataObj.append("date_of_birth", formData.date_of_birth);
       formDataObj.append("mobile_number", formData.mobile_number);
   
-      await axios.patch("http://localhost:8000/api/users/profile/", formDataObj, {
+      await axios.patch("https://testhost.pythonanywhere.com/api/users/profile/", formDataObj, {
         headers: { Authorization: `Bearer ${token}`, "Content-Type": "multipart/form-data" },
       });
   
