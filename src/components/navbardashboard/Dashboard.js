@@ -15,7 +15,7 @@ const Dashboard = () => {
     const fetchStats = async () => {
       try {
         const headers = token ? { Authorization: `Bearer ${token}` } : {};
-        const response = await axios.get("https://testhost.pythonanywhere.com/api/users/resume-stats/", { headers });
+        const response = await axios.get("http://localhost:8000/api/users/resume-stats/", { headers });
         setStats(response.data);
       } catch (error) {
         console.error("Error fetching resume stats:", error);

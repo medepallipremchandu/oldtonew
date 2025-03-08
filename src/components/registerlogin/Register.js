@@ -16,7 +16,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://testhost.pythonanywhere.com/api/users/register/", formData);
+      const response = await axios.post("http://localhost:8000/api/users/register/", formData);
       alert(response.data.message);
       navigate("/verify-otp", { state: { email: formData.email } });
     } catch (error) {

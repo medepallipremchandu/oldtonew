@@ -41,7 +41,7 @@ const ResumeUpload = () => {
 
   const fetchUserProfile = async (token) => {
     try {
-      const response = await axios.get("https://testhost.pythonanywhere.com/api/users/me/", {
+      const response = await axios.get("http://localhost:8000/api/users/me/", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUsername(response.data.username || "User");
@@ -55,7 +55,7 @@ const ResumeUpload = () => {
     try {
       const token = localStorage.getItem("token");
       if (!token) return;
-      const response = await axios.get("https://testhost.pythonanywhere.com/api/users/process-resume/", {
+      const response = await axios.get("http://localhost:8000/api/users/process-resume/", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setResumeList(response.data || []);
@@ -82,7 +82,7 @@ const ResumeUpload = () => {
     formData.append("job_description", jobDescription);
 
     try {
-      const response = await axios.post("https://testhost.pythonanywhere.com/api/users/process-resume/", formData, {
+      const response = await axios.post("http://localhost:8000/api/users/process-resume/", formData, {
         headers: { Authorization: `Bearer ${token}`, "Content-Type": "multipart/form-data" },
       });
 
