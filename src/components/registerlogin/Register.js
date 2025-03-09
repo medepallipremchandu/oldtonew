@@ -17,7 +17,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const response = await axios.post("https://testhost.pythonanywhere.com/api/users/register/", formData);
-      alert(response.data.message);
+      alert(response.data.message); // Add a toust or any UI element to notify the user registration was successful otp sent to mail
       navigate("/verify-otp", { state: { email: formData.email } });
     } catch (error) {
       alert(error.response.data.error || "Registration failed.");
