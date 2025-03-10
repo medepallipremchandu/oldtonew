@@ -22,9 +22,9 @@ const App = () => {
       <Navbar />
       <Routes>
       <Route path="/" element={<Dashboard />} />\
-        <Route path="/register" element={<Register />} />
+        <Route path="/sign-up" element={<Register />} />
         <Route path="/verify-otp" element={<OTPVerify />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/sign-in" element={<Login />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/add-profile" element={<AddProfile />} />
