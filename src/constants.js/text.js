@@ -10,7 +10,7 @@ export const login_navy_items = [
     "About Us",
     "Contact Us",
     "Profile",
-    // "Logout",
+    "Logout",
 ];
 
 export const openMenuIconSvg = (handleToggleMenu) => <svg
