@@ -37,23 +37,18 @@ const Navbar = () => {
       <a className="resume-builder-logo" href="/">
         Resume Builder
       </a>
-      <ul className= {`nav-items ${showMenu ? 'open' : ""}`} ref={menuRef} >
+      <ul className={`nav-items ${showMenu ? "open" : ""}`} ref={menuRef}>
         {token
           ? login_navy_items.map((item, index) => (
               <li key={index} className="nav-item">
                 <Link
                   to={item.toLowerCase().replace(" ", "-")}
-                  onClick={ () => {
-                    if(item === "Logout") {
+                  onClick={() => {
+                    if (item === "Logout") {
                       handleLogout();
-                      handleToggleMenu();
                     }
-                    else {
-                      handleToggleMenu();
-                    }
-                  }
-                   
-                  }
+                    showMenu && handleToggleMenu();
+                  }}
                 >
                   {item}
                 </Link>
@@ -64,7 +59,7 @@ const Navbar = () => {
                 {
                   <Link
                     to={"/" + item.toLowerCase().replace(" ", "-")}
-                    onClick={handleToggleMenu}
+                    onClick={showMenu && handleToggleMenu}
                   >
                     {item}
                   </Link>

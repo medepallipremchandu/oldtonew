@@ -18,10 +18,11 @@ import Services from "./components/contactaboutusservices/Services";
 
 const App = () => {
   return (
+
     <Router>
       <Navbar />
       <Routes>
-      <Route path="/" element={<Dashboard />} />\
+        <Route path="/" element={<Dashboard />} />\
         <Route path="/sign-up" element={<Register />} />
         <Route path="/verify-otp" element={<OTPVerify />} />
         <Route path="/sign-in" element={<Login />} />
@@ -32,7 +33,7 @@ const App = () => {
         {/* <Route path="/contact-us" element={<Contactus />} /> */}
         <Route path="/services" element={<Services />} />
 
-        <Route path="/contact-us" element={<ProtectedRoute><Contactus /></ProtectedRoute>}  />
+        <Route path="/contact-us" element={<ProtectedRoute><Contactus /></ProtectedRoute>} />
         <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
         <Route path="/edit-profile" element={<ProtectedRoute><EditProfile /></ProtectedRoute>} />
         <Route path="/resume-upload" element={<ProtectedRoute><ResumeUpload /></ProtectedRoute>} />
